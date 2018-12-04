@@ -77,6 +77,14 @@ NSString * iphoneTypeGet(void){
     
     if ([platform isEqualToString:@"iPhone10,6"]) return @"iPhone X";
     
+    if ([platform isEqualToString:@"iPhone11,2"]) return @"iPhone XS";
+    
+    if ([platform isEqualToString:@"iPhone11,4"]) return @"iPhone XS Max";
+    
+    if ([platform isEqualToString:@"iPhone11,6"]) return @"iPhone XS Max";
+    
+    if ([platform isEqualToString:@"iPhone11,8"]) return @"iPhone XR";
+    
     if ([platform isEqualToString:@"iPod1,1"]) return @"iPod Touch 1G";
     
     if ([platform isEqualToString:@"iPod2,1"]) return @"iPod Touch 2G";
@@ -161,6 +169,10 @@ NSString * iphoneTypeGet(void){
     
     if ([platform isEqualToString:@"iPad7,4"]) return @"iPad Pro (10.5-inch)";
     
+    if ([platform isEqualToString:@"iPad7,5"]) return @"iPad 6";
+    
+    if ([platform isEqualToString:@"iPad7,6"]) return @"iPad 6";
+    
     if ([platform isEqualToString:@"i386"]) return @"iPhone Simulator";
     
     if ([platform isEqualToString:@"x86_64"]) return @"iPhone Simulator";
@@ -172,11 +184,31 @@ NSString * iphoneTypeGet(void){
 //从状态栏获取高度
 CGFloat StatebarHeight(void) {
     
-    UIApplication *app = [UIApplication sharedApplication];
+    NSNumber *stateHeightNumber = [[NSUserDefaults standardUserDefaults] valueForKey:@"lx_category_device_stateBar_height"];
     
-    UIView *statusBar = [app valueForKeyPath:@"statusBar"];
+    if (!stateHeightNumber) {
+        
+        UIApplication *app = [UIApplication sharedApplication];
+        
+        UIView *statusBar = [app valueForKeyPath:@"statusBar"];
+        
+        CGFloat stateHeight = statusBar.frame.size.height;
+        [[NSUserDefaults standardUserDefaults] setValue:@(stateHeight) forKey:@"lx_category_device_stateBar_height"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        return statusBar.frame.size.height;
+    }
+    return stateHeightNumber.floatValue;
+}
+
+/**
+ 是否刘海屏 - x系列
+ 
+ @return bool
+ */
+BOOL isIphoneHair(void) {
     
-    return statusBar.frame.size.height;
+    return (StatebarHeight() > 40) ? YES : NO;
 }
 
 BOOL isConnectionAvailable(void) {

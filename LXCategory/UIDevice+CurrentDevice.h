@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#define lxStateHeight StatebarHeight()
+#define lxIsPhoneX isIphoneHair()
+
 @interface UIDevice (CurrentDevice)
 
-//获取设备信号
-NSString * iphoneTypeGet(void);
+//获取设备型号
+NSString *iphoneTypeGet(void);
 
 /**
  状态栏高度
@@ -19,6 +22,13 @@ NSString * iphoneTypeGet(void);
  @return 状态栏高度
  */
 CGFloat StatebarHeight(void);
+
+/**
+ 是否刘海屏 - x系列
+
+ @return bool
+ */
+BOOL isIphoneHair(void);
 
 /**
  网络是否连接

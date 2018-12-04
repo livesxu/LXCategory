@@ -19,5 +19,6 @@
 #import "UIView+HitTest.h"
 #import "UIControl+TouchControl.h"
 #import "UITextView+PlaceHolder.h"
+#import "NSNumber+LXSafeCategory.h"
 
 #endif /* LXCategorys_h */
