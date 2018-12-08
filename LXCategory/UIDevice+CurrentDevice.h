@@ -17,7 +17,7 @@
 NSString *iphoneTypeGet(void);
 
 /**
- 状态栏高度
+ 状态栏高度 - 如果开热点，高度不包含在内 - 需要监听UIApplicationDidChangeStatusBarFrameNotification比对操作
 
  @return 状态栏高度
  */

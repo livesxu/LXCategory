@@ -252,6 +252,8 @@ void fcxSafeCollectionLog(NSString *fmt, ...)
 
 @implementation FCXSafeCollection
 
+#if !DEBUG
+
 + (void)load {
     
     static dispatch_once_t onceToken;
@@ -277,6 +279,8 @@ void fcxSafeCollectionLog(NSString *fmt, ...)
         
     });
 }
+
+#endif
 
 + (void)swizzleInstanceMethodWithClass:(Class)class
                       originalSelector:(SEL)originalSelector

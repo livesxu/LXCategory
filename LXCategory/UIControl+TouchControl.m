@@ -13,6 +13,7 @@
 @property (nonatomic, assign) BOOL isIgnoreEvent;
 @end
 @implementation UIControl (TouchControl)
+
 + (void)load{
     
     static dispatch_once_t onceToken;

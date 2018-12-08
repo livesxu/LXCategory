@@ -8,13 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^TouchBlock)(CGPoint touchPoint);
+typedef void(^TouchBlock)(UIView *sender,CGPoint touchPoint);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImageView (LXTouch)
+@interface UIView (LXTouch)
 
+//添加手势添加的操作方法
 @property (nonatomic,   copy) TouchBlock touchAction;
+
+@end
+
+
+typedef void(^LXTargetBlock)(id selInfo);
+
+@interface LXTargetBlockItem : NSObject
+
+@property (nonatomic,  copy) LXTargetBlock block;
 
 @end
 

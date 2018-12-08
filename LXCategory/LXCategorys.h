@@ -4,20 +4,20 @@
 #ifndef LXCategorys_h
 #define LXCategorys_h
 
-#import "UIView+Layout.h"
-#import "UIImage+RTTint.h"
 #import "UIView+LayerAction.h"
+#import "UIView+LXTouch.h"
+#import "UIView+HitTest.h"
 #import "NSString+Deal.h"
 #import "NSString+PreciseDecimalCalculate.h"
-#import "UIButton+Custom.h"
 #import "UIColor+Turn.h"
+#import "UIImage+RTTint.h"
 #import "UIImage+Deal.h"
-#import "UILabel+Custom.h"
-#import "UIDevice+CurrentDevice.h"
 #import "UIImageView+CornerRadius.h"
-#import "UIScrollView+EmptyDataSet.h"
-#import "UIView+HitTest.h"
+#import "UILabel+Custom.h"
+#import "UIButton+Custom.h"
 #import "UIControl+TouchControl.h"
+#import "UIDevice+CurrentDevice.h"
+#import "UIScrollView+EmptyDataSet.h"
 #import "UITextView+PlaceHolder.h"
 #import "NSNumber+LXSafeCategory.h"
 

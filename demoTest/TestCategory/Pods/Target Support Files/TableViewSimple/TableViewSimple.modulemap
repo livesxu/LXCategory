@@ -1,6 +1,0 @@
-framework module TableViewSimple {
-  umbrella header "TableViewSimple-umbrella.h"
-
-  export *
-  module * { export * }
-}

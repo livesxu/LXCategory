@@ -23,26 +23,69 @@ const char kProcessedImage;
 @end
 
 @implementation UIImageView (CornerRadius)
+
 /**
- * @brief init the Rounding UIImageView, no off-screen-rendered
+ 设置圆角(包含边线)
+ 
+ @param radius 圆角
+ @param borderWidth 边宽
+ @param borderColor 边色
  */
-- (instancetype)initWithRoundingRectImageView {
-    self = [super init];
-    if (self) {
-        [self zy_cornerRadiusRoundingRect];
-    }
-    return self;
+- (void)setRadius:(CGFloat)radius
+      borderWidth:(CGFloat)borderWidth
+      borderColor:(UIColor *)borderColor {
+    
+    [self zy_cornerRadiusAdvance:radius rectCornerType:UIRectCornerAllCorners];
+    [self zy_attachBorderWidth:borderWidth color:borderColor];
 }
 
 /**
- * @brief init the UIImageView with cornerRadius, no off-screen-rendered
+ 设置圆角(不含边线)
+ 
+ @param radius 圆角
  */
-- (instancetype)initWithCornerRadiusAdvance:(CGFloat)cornerRadius rectCornerType:(UIRectCorner)rectCornerType {
-    self = [super init];
-    if (self) {
-        [self zy_cornerRadiusAdvance:cornerRadius rectCornerType:rectCornerType];
-    }
-    return self;
+- (void)setClearRadius:(CGFloat)radius {
+    
+    [self zy_cornerRadiusAdvance:radius rectCornerType:UIRectCornerAllCorners];
+}
+
+/**
+ 设置边线(无圆角)
+ 
+ @param borderWidth 边宽
+ @param borderColor 边色
+ */
+- (void)setBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor {
+    
+    [self zy_attachBorderWidth:borderWidth color:borderColor];
+}
+
+/**
+ 设置圆角(可非四周圆角)
+ 
+ @param corners UIRectCorner
+ @param radius 圆角
+ */
+- (void)setRoundedCorners:(UIRectCorner)corners radius:(CGFloat)radius {
+    
+    [self zy_cornerRadiusAdvance:radius rectCornerType:corners];
+}
+
+/**
+ 设置圆角+边线(可非四周圆角)
+ 
+ @param corners UIRectCorner
+ @param radius 圆角
+ @param borderWidth 边宽
+ @param borderColor 边色
+ */
+- (void)setRoundedCorners:(UIRectCorner)corners
+                   radius:(CGFloat)radius
+              borderWidth:(CGFloat)borderWidth
+              borderColor:(UIColor *)borderColor {
+    
+    [self zy_cornerRadiusAdvance:radius rectCornerType:corners];
+    [self zy_attachBorderWidth:borderWidth color:borderColor];
 }
 
 /**

@@ -192,7 +192,7 @@ CGFloat StatebarHeight(void) {
         
         UIView *statusBar = [app valueForKeyPath:@"statusBar"];
         
-        CGFloat stateHeight = statusBar.frame.size.height;
+        CGFloat stateHeight = statusBar.frame.size.height > 40 ? 44 : 20;//考虑出现热点40
         [[NSUserDefaults standardUserDefaults] setValue:@(stateHeight) forKey:@"lx_category_device_stateBar_height"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         

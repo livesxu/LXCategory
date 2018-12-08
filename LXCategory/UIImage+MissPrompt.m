@@ -11,7 +11,9 @@
 #import <objc/runtime.h>
 
 @implementation UIImage (MissPrompt)
-//隐
+
+#if DEBUG
+
 // 加载分类到内存的时候调用
 + (void)load
 {
@@ -31,7 +33,7 @@
     });
 }
 
-// 不能在分类中重写系统方法imageNamed，因为会把系统的功能给覆盖掉，而且分类中不能调用super.
+#endif
 
 // 既能加载图片又能打印
 + (instancetype)imageWithName:(NSString *)name
@@ -40,7 +42,7 @@
     UIImage *image = [self imageWithName:name];
     
     if (image == nil) {
-        NSLog(@"加载空的图片 %@",name);
+        NSLog(@"/n/n ToFix:-- No Exit Image Named ——> %@ /n/n",name);
     }
     
     return image;
