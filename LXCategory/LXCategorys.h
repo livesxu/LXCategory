@@ -20,5 +20,6 @@
 #import "UIScrollView+EmptyDataSet.h"
 #import "UITextView+PlaceHolder.h"
 #import "NSNumber+LXSafeCategory.h"
+#import "NSString+LXSafeCategory.h"
 
 #endif /* LXCategorys_h */

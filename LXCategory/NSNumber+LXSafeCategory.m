@@ -8,6 +8,11 @@
 #import "NSNumber+LXSafeCategory.h"
 #import <objc/runtime.h>
 
+NSNumber *NumberValue(id value) {
+    
+    return [NSNumber numberValue:value];
+}
+
 @implementation NSNumber (LXSafeCategory)
 
 - (NSUInteger)length {
@@ -59,6 +64,39 @@
         return [sString hasPrefix:str];
     }
     return NO;
+}
+
++ (NSNumber *)numberValue:(id)value {
+    
+    if ([value isKindOfClass:[NSNumber class]]) {
+        
+        return value;
+    }
+    else if ([value isKindOfClass:[NSString class]])
+    {
+        NSScanner *scan = [NSScanner scannerWithString:value];
+        
+        double vd;
+        long long vl;
+        
+        if ([scan scanLongLong:&vl] && [scan isAtEnd])
+        {
+            return @(((NSString *)value).longLongValue);
+        }
+        else if ([scan scanDouble:&vd] && [scan isAtEnd])
+        {
+            return @(((NSString *)value).doubleValue);
+        }
+        else
+        {
+            return @0;
+        }
+    }
+    else if (!value || [value isKindOfClass:[NSNull class]])
+    {
+        return @0;
+    }
+    return @0;
 }
 
 @end

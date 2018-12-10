@@ -7,6 +7,10 @@
 
 #import <Foundation/Foundation.h>
 
+#define lxSafeNumber(xxx) NumberValue(xxx)
+
+NSNumber *NumberValue(id value);
+
 @interface NSNumber (LXSafeCategory)
 
 @property (nonatomic,readonly) NSUInteger length;
@@ -16,5 +20,7 @@
 - (BOOL)containsString:(NSString *)str;
 
 - (BOOL)hasPrefix:(NSString *)str;
+
++ (NSNumber *)numberValue:(id)value;
 
 @end
