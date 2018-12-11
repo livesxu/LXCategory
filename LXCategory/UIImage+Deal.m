@@ -195,10 +195,12 @@
 }
 
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
-    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    if (!color || size.width <= 0 || size.height <= 0) return nil;
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
-    [color setFill];
-    UIRectFill(rect);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
@@ -260,17 +262,17 @@
     return img;
 }
 
-- (NSData *)compressData {
+- (NSData *)compressDataIn:(int)intKB {
     NSData *data = UIImageJPEGRepresentation(self, 1.0);
     
-    double proportion = (1024 *200)/data.length;//控制在200kb
+    double proportion = (1024 * intKB)/data.length;//控制在xxx kb
     
-    double try = 0.8;
+    double try = 0.9;
     while (proportion < 1) {
         
         data = UIImageJPEGRepresentation(self, try);
         
-        proportion = (1024 *200)/data.length;//控制在200kb
+        proportion = (1024 * intKB)/data.length;
         
         try -= 0.1;
     }

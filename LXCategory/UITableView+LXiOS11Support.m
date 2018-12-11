@@ -1,15 +1,11 @@
 //
-//  UITableView+FZJTiOS11Support.m
-//  XiaoLiuRetail
-//
-//  Created by Livespro on 2017/9/25.
-//  Copyright © 2017年 福中. All rights reserved.
+//  UITableView+LXiOS11Support.m
 //
 
-#import "UITableView+FZJTiOS11Support.h"
+#import "UITableView+LXiOS11Support.h"
 #import <objc/runtime.h>
 
-@implementation UITableView (FZJTiOS11Support)
+@implementation UITableView (LXiOS11Support)
 
 + (void)load {
     static dispatch_once_t onceToken;

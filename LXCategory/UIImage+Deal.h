@@ -42,6 +42,12 @@
 /*生成图片*/
 + (UIImage*)getImageWithColor:(UIColor*)color andHeight:(CGFloat)height;
 
-- (NSData *)compressData;
+/**
+ 控制/压缩图片低于kb
+
+ @param intKB 值
+ @return data
+ */
+- (NSData *)compressDataIn:(int)intKB;
 
 @end

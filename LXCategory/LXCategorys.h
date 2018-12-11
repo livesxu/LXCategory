@@ -10,7 +10,7 @@
 #import "NSString+Deal.h"
 #import "NSString+PreciseDecimalCalculate.h"
 #import "UIColor+Turn.h"
-#import "UIImage+RTTint.h"
+#import "UIImage+LXTint.h"
 #import "UIImage+Deal.h"
 #import "UIImageView+CornerRadius.h"
 #import "UILabel+Custom.h"
