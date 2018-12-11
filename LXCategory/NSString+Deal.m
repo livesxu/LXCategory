@@ -11,37 +11,6 @@
 #define AvailableString(string) string == nil || ![string isKindOfClass:[NSString class]] ? @"":string
 
 @implementation NSString (Deal)
-//拼接post的xml字符串
-+ (NSString *)stringByModular:(NSString *)modular requestName:(NSString *)requestNameStr insertXml:(NSString *)insertXmlStr
-{
-    // AppInfo *app = [AppInfo shareInstance];
-    
-    NSMutableString *mutString = [[NSMutableString alloc]init];
-    
-    [mutString appendString:[NSString stringWithFormat:@"<fzjt><head>"]];
-    [mutString appendString:[NSString stringWithFormat:@"<username>123</username>"]];
-    [mutString appendString:[NSString stringWithFormat:@"<password>123</password>"]];
-    [mutString appendString:[NSString stringWithFormat:@"<modular>%@</modular>",modular]];
-    [mutString appendString:[NSString stringWithFormat:@"<requestname>%@</requestname>",requestNameStr]];
-    [mutString appendString:[NSString stringWithFormat:@"<timestamp>11111</timestamp>"]];
-    [mutString appendString:[NSString stringWithFormat:@"<peoplename>1111</peoplename>"]];
-    [mutString appendString:[NSString stringWithFormat:@"<versions>1111</versions>"]];
-    //
-    [mutString appendString:[NSString stringWithFormat:@"</head><body><info>"]];
-    
-    [mutString appendString:insertXmlStr];
-    
-    [mutString appendString:[NSString stringWithFormat:@"</info></body></fzjt>"]];
-    
-    return mutString;
-}
-
-//字符串去掉&
-+ (NSString *)stringWithOutAnd:(NSString *)string
-{
-    NSString *changeStr = [string stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"];
-    return changeStr;
-}
 
 + (NSString *)getMd5Str:(NSString *)str
 {
@@ -78,14 +47,6 @@
     return lowerStr;
     
 }
-
-//#pragma mark <br> 换成 \n
-//+ (NSString *)changeLineWithString:(NSString *)string
-//{
-//    NSString *jsStr = [string stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"] ;
-//    
-//    return jsStr;
-//}
 
 #pragma mark 邮箱加*号
 + (NSString *)getSecretEmailWithEmail:(NSString *)email

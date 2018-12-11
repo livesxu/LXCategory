@@ -4,13 +4,6 @@
 
 @interface NSString (Deal)
 
-
-//字符串去掉&
-+ (NSString *)stringWithOutAnd:(NSString *)string;
-
-//拼接post的xml字符串
-+ (NSString *)stringByModular:(NSString *)modular requestName:(NSString *)requestNameStr insertXml:(NSString *)insertXmlStr;
-
 //字符串md5转码
 +(NSString *)getMd5Str:(NSString *)str;
 
