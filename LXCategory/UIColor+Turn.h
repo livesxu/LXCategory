@@ -1,9 +1,7 @@
 //
 //  UIColor+Turn.h
-//  XiaoLiuRetail
-//
-//  Created by imac on 15/11/7.
-//  Copyright © 2015年 福中. All rights reserved.
+
+//  Copyright © 2015年 Livesxu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

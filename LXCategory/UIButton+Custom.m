@@ -1,12 +1,11 @@
 //
 //  UIButton+Custom.m
-//  XiaoLiuRetail
-//
-//  Created by imac on 15/11/16.
-//  Copyright © 2015年 福中. All rights reserved.
+
+//  Copyright © 2015年 Livesxu. All rights reserved.
 //
 
 #import "UIButton+Custom.h"
+#import "UIView+LXTouch.h"
 
 @implementation UIButton (Custom)
 
@@ -74,6 +73,16 @@
     }
     
     return button;
+}
+
+/**
+ TouchUpInside事件 配置
+ 
+ @param block action
+ */
+- (void)configTouchUpInsideAction:(void (^)(id sender))block {
+    
+    [self lx_addActionWithControlEvents:UIControlEventTouchUpInside block:block];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame

@@ -16,6 +16,7 @@
 #import "UILabel+Custom.h"
 #import "UIButton+Custom.h"
 #import "UIControl+TouchControl.h"
+#import "UITextField+Custom.h"
 #import "UIDevice+CurrentDevice.h"
 #import "UIScrollView+EmptyDataSet.h"
 #import "UITextView+PlaceHolder.h"

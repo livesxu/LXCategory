@@ -1,9 +1,7 @@
 //
 //  UIView+HitTest.m
-//  Shuzan
-//
-//  Created by 福中 on 17/1/11.
-//  Copyright © 2017年 FZ. All rights reserved.
+
+//  Copyright © 2017年 Livesxu. All rights reserved.
 //
 
 #import "UIView+HitTest.h"

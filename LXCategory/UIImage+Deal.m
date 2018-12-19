@@ -1,9 +1,5 @@
 //
 //  UIImage+Deal.m
-//  XTWL_XFJY
-//
-//  Created by xuntiangwangluo on 14-12-9.
-//  Copyright (c) 2014年 xuntiangwangluo. All rights reserved.
 //
 
 #import "UIImage+Deal.h"

@@ -1,9 +1,7 @@
 //
 //  UIButton+Custom.h
-//  XiaoLiuRetail
-//
-//  Created by imac on 15/11/16.
-//  Copyright © 2015年 福中. All rights reserved.
+
+//  Copyright © 2015年 Livesxu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -51,6 +49,13 @@
                          TitleFont:(UIFont *)font
                         TitleColor:(UIColor *)tc
                    BackgroundColor:(UIColor *)color;
+
+/**
+ TouchUpInside事件 配置
+
+ @param block action
+ */
+- (void)configTouchUpInsideAction:(void (^)(id sender))block;
 
 /**
  qk config btn

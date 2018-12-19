@@ -1,5 +1,5 @@
 
-//runtime图片未导入项目，runtime策略Two
+//debug - 验证图片存在
 
 #import <UIKit/UIKit.h>
 

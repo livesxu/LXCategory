@@ -3,7 +3,7 @@
 //  XiaoLiuRetail
 //
 //  Created by MacBook pro on 16/4/20.
-//  Copyright © 2016年 福中. All rights reserved.
+//  Copyright © 2016年 Livesxu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
