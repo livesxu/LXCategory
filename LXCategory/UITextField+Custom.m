@@ -81,7 +81,6 @@ static const int maxLength_key;
 
 - (void)configPassWordTf {
     
-    self.keyboardType = UIKeyboardTypeNumberPad;
     self.returnKeyType = UIReturnKeyDone;
     self.secureTextEntry = YES;
 }
