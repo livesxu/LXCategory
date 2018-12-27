@@ -22,5 +22,6 @@
 #import "UITextView+PlaceHolder.h"
 #import "NSNumber+LXSafeCategory.h"
 #import "NSString+LXSafeCategory.h"
+#import "NSObject+LXObserver.h"
 
 #endif /* LXCategorys_h */
