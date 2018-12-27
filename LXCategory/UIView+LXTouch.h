@@ -61,6 +61,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)lx_removeActionWithControlEvents:(UIControlEvents)controlEvents;
 
 /**
+ 点击事件 - UIControlEventTouchUpInside
+
+ @param block block
+ */
+- (void)lx_addTouchActionWithBlock:(void (^)(UIControl *sender))block;
+
+/**
  移除所有事件
  */
 - (void)lx_removeAllTargets;

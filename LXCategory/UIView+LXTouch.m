@@ -200,6 +200,16 @@ void control_event_invoke(id self, SEL _cmd, id sender) {
     }];
 }
 
+/**
+ 点击事件 - UIControlEventTouchUpInside
+ 
+ @param block block
+ */
+- (void)lx_addTouchActionWithBlock:(void (^)(UIControl *sender))block {
+    
+    [self lx_addActionWithControlEvents:UIControlEventTouchUpInside block:block];
+}
+
 - (void)lx_removeAllTargets {
     [[self allTargets] enumerateObjectsUsingBlock: ^(id object, BOOL *stop) {
         [self removeTarget:object action:NULL forControlEvents:UIControlEventAllEvents];
