@@ -10,6 +10,7 @@
 
 #define lxStateHeight StatebarHeight()
 #define lxIsPhoneX isIphoneHair()
+#define lxBottomAreaHeight (isIphoneHair() ? 34.0 : 0)
 
 @interface UIDevice (CurrentDevice)
 
