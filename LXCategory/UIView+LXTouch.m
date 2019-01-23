@@ -205,7 +205,7 @@ void control_event_invoke(id self, SEL _cmd, id sender) {
  
  @param block block
  */
-- (void)lx_addTouchActionWithBlock:(void (^)(UIControl *sender))block {
+- (void)lx_addActionTouchWithBlock:(void (^)(UIControl *sender))block {
     
     [self lx_addActionWithControlEvents:UIControlEventTouchUpInside block:block];
 }

@@ -23,5 +23,6 @@
 #import "NSNumber+LXSafeCategory.h"
 #import "NSString+LXSafeCategory.h"
 #import "NSObject+LXObserver.h"
+#import "NSObject+Chain_lx.h"
 
 #endif /* LXCategorys_h */

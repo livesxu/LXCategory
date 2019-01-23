@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param block block
  */
-- (void)lx_addTouchActionWithBlock:(void (^)(UIControl *sender))block;
+- (void)lx_addActionTouchWithBlock:(void (^)(UIControl *sender))block;
 
 /**
  移除所有事件
