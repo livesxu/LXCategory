@@ -10,6 +10,10 @@
 
 #import "LXCategorys.h"
 
+#import "UIImageView+CustomChainTest.h"
+
+#import "ImageViewCustomChainTest.h"
+
 @interface ViewController ()
 
 @end
@@ -37,6 +41,24 @@
     [imgView lx_addActionWithBlock:^(UIView *sender, CGPoint touchPoint) {
         
         NSLog(@"touch - imgView");
+    }];
+    
+    
+    ImageViewCustomChainTest *imgViewTest = (ImageViewCustomChainTest *)ImageViewCustomChainTest.alloc.init.lx_frame(CGRectMake(200, 400, 50, 50)).lx_backgroundColor([UIColor blueColor]).lx_test1P(@"111").lx_test2P(@"222").lx_touthChnageSize(CGSizeMake(100, 100));
+    
+    [self.view addSubview:imgViewTest];
+    
+    [imgViewTest lx_addActionWithBlock:^(UIView *sender, CGPoint touchPoint) {
+        
+        ImageViewCustomChainTest *ins = (ImageViewCustomChainTest *)sender;
+        
+        CGRect frame = ins.frame;
+        
+        frame.size = ins.touthChnageSize;
+        
+        ins.frame = frame;
+        
+        NSLog(@"touch - imgView %@  %@",ins.test1P,ins.test2P);
     }];
 }
 

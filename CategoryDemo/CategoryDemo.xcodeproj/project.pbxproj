@@ -14,6 +14,8 @@
 		E139080521F9FE410046FB59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E139080421F9FE410046FB59 /* main.m */; };
 		E139080F21F9FE410046FB59 /* CategoryDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E139080E21F9FE410046FB59 /* CategoryDemoTests.m */; };
 		E139081A21F9FE410046FB59 /* CategoryDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E139081921F9FE410046FB59 /* CategoryDemoUITests.m */; };
+		E1D989E721FA019500BF3C6C /* UIImageView+CustomChainTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D989E621FA019500BF3C6C /* UIImageView+CustomChainTest.m */; };
+		E1D989EA21FA01DF00BF3C6C /* ImageViewCustomChainTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D989E921FA01DF00BF3C6C /* ImageViewCustomChainTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		E139081521F9FE410046FB59 /* CategoryDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CategoryDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E139081921F9FE410046FB59 /* CategoryDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryDemoUITests.m; sourceTree = "<group>"; };
 		E139081B21F9FE410046FB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1D989E521FA019500BF3C6C /* UIImageView+CustomChainTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CustomChainTest.h"; sourceTree = "<group>"; };
+		E1D989E621FA019500BF3C6C /* UIImageView+CustomChainTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CustomChainTest.m"; sourceTree = "<group>"; };
+		E1D989E821FA01DF00BF3C6C /* ImageViewCustomChainTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewCustomChainTest.h; sourceTree = "<group>"; };
+		E1D989E921FA01DF00BF3C6C /* ImageViewCustomChainTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewCustomChainTest.m; sourceTree = "<group>"; };
 		EACCE1E8A9B42CD88F34F4E6 /* Pods_CategoryDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CategoryDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6A2C62531EBF85853C72C9 /* Pods-CategoryDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CategoryDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CategoryDemo/Pods-CategoryDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +122,10 @@
 				E13907F621F9FE400046FB59 /* AppDelegate.m */,
 				E13907F821F9FE400046FB59 /* ViewController.h */,
 				E13907F921F9FE400046FB59 /* ViewController.m */,
+				E1D989E521FA019500BF3C6C /* UIImageView+CustomChainTest.h */,
+				E1D989E621FA019500BF3C6C /* UIImageView+CustomChainTest.m */,
+				E1D989E821FA01DF00BF3C6C /* ImageViewCustomChainTest.h */,
+				E1D989E921FA01DF00BF3C6C /* ImageViewCustomChainTest.m */,
 				E13907FE21F9FE410046FB59 /* Assets.xcassets */,
 				E139080321F9FE410046FB59 /* Info.plist */,
 				E139080421F9FE410046FB59 /* main.m */,
@@ -330,8 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13907FA21F9FE400046FB59 /* ViewController.m in Sources */,
+				E1D989E721FA019500BF3C6C /* UIImageView+CustomChainTest.m in Sources */,
 				E139080521F9FE410046FB59 /* main.m in Sources */,
 				E13907F721F9FE400046FB59 /* AppDelegate.m in Sources */,
+				E1D989EA21FA01DF00BF3C6C /* ImageViewCustomChainTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
