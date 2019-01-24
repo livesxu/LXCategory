@@ -1,0 +1,23 @@
+PODS:
+  - LXCategory (0.1.0):
+    - LXCategory/no-arc (= 0.1.0)
+  - LXCategory/no-arc (0.1.0)
+
+DEPENDENCIES:
+  - LXCategory (from `https://github.com/livesxu/LXCategory.git`)
+
+EXTERNAL SOURCES:
+  LXCategory:
+    :git: https://github.com/livesxu/LXCategory.git
+
+CHECKOUT OPTIONS:
+  LXCategory:
+    :commit: 3316a80da22fc9c703146e3ef2544e58e96c576d
+    :git: https://github.com/livesxu/LXCategory.git
+
+SPEC CHECKSUMS:
+  LXCategory: 30431f1487596e645f7ea2230577859f3acd9195
+
+PODFILE CHECKSUM: bc724f539fdafacda0c549318c974765314a50b6
+
+COCOAPODS: 1.0.0
