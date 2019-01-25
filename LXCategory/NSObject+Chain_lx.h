@@ -7,24 +7,16 @@
 @interface NSObject (Chain_lx)
 
 /**
- 类调用注册链式 - UIView,UIImageView,UITextField,UITextView,UILabel,UIButton 已注册
+ 类调用注册链式(对customChainDictionary注册) - UIView,UIImageView,UITextField,UITextView,UILabel,UIButton 已注册
  */
 + (void)LXChainList;
 
-
 /**
- 默认链
+ 类调用注册链式方法
 
- @return @{@"lx_<#property#>":@"<#type#>"} - type:  id -> id
-                                            int -> NSInteger
-                                            CGFloat -> CGFloat
-                                            double -> double
-                                            bool -> BOOL
-                                            size -> eg:CGSize,CGPoint--- 结构体样式 - struct .. {CGFloat xxx;CGFloat xxx;}
-                                            rect -> eg:CGRect        --- 结构体样式 - struct .. {CGSize xxx;CGSize xxx;}
-                                            inset -> eg:UIEdgeInsets --- 结构体样式 - struct .. {CGFloat xxx, xxx, xxx, xxx;}
+ @param dic 需要注册的数据映射
  */
-+ (NSDictionary *)chainDictionary;
++ (void)LXChainWithDic:(NSDictionary *)dic;
 
 /**
  自定义链

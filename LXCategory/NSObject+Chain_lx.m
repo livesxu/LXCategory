@@ -40,6 +40,11 @@ typedef id (^LinkInset)(UIEdgeInsets inseter);
     [dic addEntriesFromDictionary:nomalDic];
     [dic addEntriesFromDictionary:customDic];
     
+    [self LXChainWithDic:dic];
+}
+
++ (void)LXChainWithDic:(NSDictionary *)dic {
+    
     if (!dic.allKeys.count) return ;
     
     for (NSString *key in dic.allKeys) {
@@ -59,30 +64,6 @@ typedef id (^LinkInset)(UIEdgeInsets inseter);
         class_addMethod(self, NSSelectorFromString(key), method_getImplementation(lx_method), method_getTypeEncoding(lx_method));
     }
 }
-
-//void LXChainAllPropertyList(NSString *className) {
-//
-//    Method lx_xxx_Method = class_getInstanceMethod([NSObject class],@selector(lx_id));
-//
-//    unsigned int propertyCount = 0;
-//    objc_property_t *propertys = class_copyPropertyList([NSClassFromString(className) class], &propertyCount);
-//    for (unsigned int i = 0; i < propertyCount; i ++) {
-//        objc_property_t *thisProperty = &propertys[i];
-//        const char* propertyName = property_getName(*thisProperty);
-////      NSLog(@"%@ -- > %s",className,propertyName);
-//        NSString *proString = [NSString stringWithFormat:@"%s",propertyName];
-//
-//        if (strncmp(propertyName,"_",1) == 0) {
-//
-//            proString = [@"lx" stringByAppendingString:proString];
-//        } else {
-//            proString = [@"lx_" stringByAppendingString:proString];
-//        }
-//
-//        class_addMethod(NSClassFromString(className), NSSelectorFromString(proString), method_getImplementation(lx_xxx_Method), method_getTypeEncoding(lx_xxx_Method));
-//    }
-//    free(propertys);
-//}
 
 
 // id -
