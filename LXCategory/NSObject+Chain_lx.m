@@ -126,7 +126,7 @@ LinkCGFloat lx_link_CGFloat(id ins,SEL sel) {
     return lx_link_double(self, _cmd);
 }
 
-LinkCGFloat lx_link_double(id ins,SEL sel) {
+LinkDouble lx_link_double(id ins,SEL sel) {
     
     return ^(double property) {
         

@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LXCategory"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "LXCategory"
   s.homepage     = "https://github.com/livesxu/LXCategory"
   s.license      = "MIT"
